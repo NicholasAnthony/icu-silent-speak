@@ -85,7 +85,7 @@ Use, redistribution, modification, or deployment must comply with:
 
 ## 🖥️ Frontend Tech Stack
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" width="40" /> <img src="https://github.com/devicons/devicon/blob/v2.17.0/icons/tailwindcss/tailwindcss-original.svg" width="40" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="30" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" width="30" /> <img src="https://github.com/devicons/devicon/blob/v2.17.0/icons/tailwindcss/tailwindcss-original.svg" width="30" />
 - React, Vite, Tailwind CSS  
 - MediaRecorder API (camera capture)  
 - Web Speech API (text-to-speech)  
@@ -94,10 +94,15 @@ Use, redistribution, modification, or deployment must comply with:
 
 ## 🔌 Backend
 
-The frontend communicates with a separate backend API.
+<img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="30" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="30" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="30" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="30" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" width="30" />
 
-Default endpoint:
-https://Nikachu86-icu-vsr-backend.hf.space/vsr
+- Hugging Face Spaces (Docker)
+- FastAPI + Uvicorn
+- Auto-AVSR pipeline
+- MediaPipe (face/lip tracking)
+- LRS3 trained visual speech recognition model
+
+The backend currently runs on CPU, so inference time depends on model load, clip length, and Space availability.
 
 ---
 
