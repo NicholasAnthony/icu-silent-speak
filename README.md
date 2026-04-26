@@ -131,6 +131,55 @@ This repository covers the frontend application only unless otherwise stated.
 All third-party models, datasets, and backend components are subject to their own licences.
 
 ---
+## Data Handling & Privacy
+
+### Video data
+
+ICU-VSR records a short (~5 second) video clip locally in the user’s browser and sends it to the backend for processing.
+
+- The video is transmitted via HTTPS to the backend endpoint
+- The backend processes the video in-memory during inference
+- The video file is stored temporarily on the server only for the duration of processing
+- Temporary files are deleted immediately after inference completes
+
+The system is designed so that video data is **not persistently stored**.
+
+### Data retention
+
+- Video clips are retained only for the duration of processing (typically seconds)
+- No long-term storage or database of videos is maintained by the application
+- No transcripts are stored on the backend
+
+### Access
+
+- Video data is accessible only to the backend service during processing
+- There is no user-facing storage, retrieval, or sharing of video data
+- The application developer does not actively monitor or review submitted videos
+
+### Additional data
+
+The system does not collect or store:
+
+- Personal identifiers
+- Patient metadata
+- Audio data
+- Location data
+
+Frontend behaviour:
+
+- Recent transcripts are stored **locally in the browser session only**
+- No data is sent to third-party analytics services
+
+### Third-party infrastructure
+
+The backend is hosted on Hugging Face Spaces.
+
+As such:
+
+- Data passes through Hugging Face infrastructure during processing
+- Handling of transient data may be subject to Hugging Face platform policies
+
+---
 
 ## 👨‍⚕️ Author
 
